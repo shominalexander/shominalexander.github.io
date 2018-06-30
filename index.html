@@ -9,14 +9,8 @@
             data-sap-ui-libs  = 'sap.m'>
     </script>
     <script>
-       sap.ui.getCore().attachInit(function () {
-           new sap.m.Button({
-               text: "Say Hello",
-               press: function() {
-                  sap.m.MessageToast.show("Hello World");
-               }
-           }).placeAt("content");
-       });
+      var B = new sap.m.Button({ text: "Say Hello", press: function() { sap.m.MessageToast.show("Hello World"); } });
+      B.placeAt("content");
    </script>
   </head>
   <body class='sapUiBody' id='content'>
