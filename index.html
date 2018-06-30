@@ -9,11 +9,10 @@
             data-sap-ui-libs  = 'sap.m'>
     </script>
     <script>
-      var D = new Date();
       var B = new sap.m.Button({ text: "Show the time",
                                 press: function() {
-                                         var T = "The time is " + D.getHours() + ":" + D.getMinutes() + ":" + D.getSeconds();
-                                         sap.m.MessageToast.show(T); 
+                                         var D = new Date();
+                                         sap.m.MessageToast.show(D.toLocalTimeString()); 
                                        }
                                });
       B.placeAt("content");
