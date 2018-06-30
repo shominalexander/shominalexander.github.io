@@ -9,7 +9,10 @@
             data-sap-ui-libs  = 'sap.m'>
     </script>
     <script>
-      var B = new sap.m.Button({ text: "Say Hello", press: function() { sap.m.MessageToast.show("Hello World"); } });
+      var D = new Date();
+      var T = "The time is " + D.getHours() + ":" + D.getMinutes() + ":" + D.getSeconds();
+      var B = new sap.m.Button({ text: "Show the time",
+                                press: function() { sap.m.MessageToast.show(T); } });
       B.placeAt("content");
    </script>
   </head>
