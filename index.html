@@ -12,7 +12,7 @@
       var B = new sap.m.Button({ text: "Show the time",
                                 press: function() {
                                          var D = new Date();
-                                         sap.m.MessageToast.show(D.toLocalTimeString()); 
+                                         sap.m.MessageToast.show(D.toLocaleTimeString()); 
                                        }
                                });
       B.placeAt("content");
