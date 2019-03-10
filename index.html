@@ -10,30 +10,27 @@
     </script>
     <script>
       var T = new sap.m.TabContainer({
-        items:[
-          new sap.m.TabContainerItem({
-            content[
-              new sap.m.Button({
-                text: "Show the time №1",
-                press: function() {
-                  var D = new Date();
-                  sap.m.MessageToast.show(D.toLocaleTimeString()); 
-                }
-              })
-            ]
-          }),
-          new sap.m.TabContainerItem({
-            content[
-              new sap.m.Button({
-                text: "Show the time №2",
-                press: function() {
-                  var D = new Date();
-                  sap.m.MessageToast.show(D.toLocaleTimeString()); 
-                }
-              })
-            ]
-          })
-        ]
+        items: {
+          template:
+            new sap.m.TabContainerItem({
+              content[
+                new sap.m.Button({
+                  text: "Show the time №1",
+                  press: function() {
+                    var D = new Date();
+                    sap.m.MessageToast.show(D.toLocaleTimeString()); 
+                  }
+                }),
+                new sap.m.Button({
+                  text: "Show the time №2",
+                  press: function() {
+                    var D = new Date();
+                    sap.m.MessageToast.show(D.toLocaleTimeString()); 
+                  }
+                })
+              ]
+            })
+        }
       })
       T.placeAt("content");
    </script>
