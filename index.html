@@ -9,13 +9,33 @@
             data-sap-ui-libs  = 'sap.m'>
     </script>
     <script>
-      var B = new sap.m.Button({ text: "Show the my time",
-                                press: function() {
-                                         var D = new Date();
-                                         sap.m.MessageToast.show(D.toLocaleTimeString()); 
-                                       }
-                               });
-      B.placeAt("content");
+      var T = new sap.m.TabContainer({
+        items:[
+          new sap.m.TabContainerItem({
+            content[
+              new sap.m.Button({
+                text: "Show the time №1",
+                press: function() {
+                  var D = new Date();
+                  sap.m.MessageToast.show(D.toLocaleTimeString()); 
+                }
+              })
+            ]
+          }),
+          new sap.m.TabContainerItem({
+            content[
+              new sap.m.Button({
+                text: "Show the time №2",
+                press: function() {
+                  var D = new Date();
+                  sap.m.MessageToast.show(D.toLocaleTimeString()); 
+                }
+              })
+            ]
+          })
+        ]
+      })
+      T.placeAt("content");
    </script>
   </head>
   <body class='sapUiBody' id='content'>
