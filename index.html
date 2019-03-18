@@ -23,7 +23,7 @@
           press: function() {
             var path = document.getElementById("path").value;
             var viewer = new sap.m.PDFViewer();
-            path = sap.ui.require.toUrl("sap/m/sample/PDFViewerPopup") + "/sample1.pdf";
+            path = "/home/sanya/Загрузки/f-max_lansman_katalog_ing_web.pdf";
             sap.m.MessageBox.confirm("path = " + path);
             viewer.setSource(path);
             viewer.open();
