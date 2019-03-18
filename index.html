@@ -13,8 +13,8 @@
         var buttonTime = new sap.m.Button({
           text: "Show the time",
           press: function() {
-            var D = new Date();
-            sap.m.MessageBox.show(D.toLocaleTimeString()); 
+            var date = new Date();
+            sap.m.MessageBox.show(date.toLocaleTimeString()); 
           }
         });
         buttonTime.placeAt("buttonTime");
@@ -23,6 +23,7 @@
           press: function() {
             var path = document.getElementById("path").value;
             var viewer = new sap.m.PDFViewer();
+            path = sap.ui.require.toUrl("sap/m/sample/PDFViewerPopup") + "/sample1.pdf";
             sap.m.MessageBox.confirm("path = " + path);
             viewer.setSource(path);
             viewer.open();
