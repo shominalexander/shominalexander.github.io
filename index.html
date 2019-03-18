@@ -14,17 +14,18 @@
           text: "Show the time",
           press: function() {
             var D = new Date();
-            sap.m.MessageToast.show(D.toLocaleTimeString()); 
+            sap.m.MessageBox.show(D.toLocaleTimeString()); 
           }
         });
         buttonTime.placeAt("buttonTime");
         var buttonPDF = new sap.m.Button({
           text: "Open PDF",
           press: function() {
-            var PDF = new sap.m.PDFViewer();
-            alert("path = " + document.getElementById("path").value);
-            PDF.setSource(document.getElementById("path").value);
-            PDF.open();
+            var path = document.getElementById("path").value;
+            var viewer = new sap.m.PDFViewer();
+            sap.m.MessageBox.confirm("path = " + path);
+            viewer.setSource(path);
+            viewer.open();
           }
         });
         buttonPDF.placeAt("buttonPDF");
