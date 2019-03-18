@@ -16,7 +16,7 @@
           sap.m.MessageToast.show(D.toLocaleTimeString()); 
         }
       });
-      buttonTime.placeAt("content");
+      buttonTime.placeAt("buttonTime");
       var buttonPDF = new sap.m.Button({
         text: "Open PDF",
         press: function() {
@@ -24,9 +24,11 @@
           sap.m.MessageToast.show(D.toLocaleTimeString()); 
         }
       });
-      buttonPDF.placeAt("content");
+      buttonPDF.placeAt("buttonPDF");
    </script>
   </head>
-  <body class='sapUiBody' id='content'>
+  <body class='sapUiBody'>
+    <div id = 'buttonTime'></div>
+    <div id = 'buttonPDF'></div>
   </body>
 </html>
