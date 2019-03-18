@@ -9,14 +9,22 @@
             data-sap-ui-libs  = 'sap.m'>
     </script>
     <script>
-      var B = new sap.m.Button({
+      var buttonTime = new sap.m.Button({
         text: "Show the time",
         press: function() {
           var D = new Date();
           sap.m.MessageToast.show(D.toLocaleTimeString()); 
         }
       });
-      B.placeAt("content");
+      buttonTime.placeAt("content");
+      var buttonPDF = new sap.m.Button({
+        text: "Open PDF",
+        press: function() {
+          var D = new Date();
+          sap.m.MessageToast.show(D.toLocaleTimeString()); 
+        }
+      });
+      buttonPDF.placeAt("content");
    </script>
   </head>
   <body class='sapUiBody' id='content'>
