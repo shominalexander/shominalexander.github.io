@@ -23,7 +23,7 @@
           press: function() {
             var PDF = new sap.m.PDFViewer();
             alert("path = " + document.getElementById("path").value);
-            PDF.setSource("/home/sanya/Загрузки/" + document.getElementById("path").value);
+            PDF.setSource(document.getElementById("path").value);
             PDF.open();
           }
         });
