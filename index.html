@@ -9,26 +9,33 @@
             data-sap-ui-libs  = 'sap.m'>
     </script>
     <script>
-      var buttonTime = new sap.m.Button({
-        text: "Show the time",
-        press: function() {
-          var D = new Date();
-          sap.m.MessageToast.show(D.toLocaleTimeString()); 
-        }
-      });
-      buttonTime.placeAt("buttonTime");
-      var buttonPDF = new sap.m.Button({
-        text: "Open PDF",
-        press: function() {
-          var D = new Date();
-          sap.m.MessageBox.show(D.toLocaleTimeString()); 
-        }
-      });
-      buttonPDF.placeAt("buttonPDF");
+      try{
+        var buttonTime = new sap.m.Button({
+          text: "Show the time",
+          press: function() {
+            var D = new Date();
+            sap.m.MessageToast.show(D.toLocaleTimeString()); 
+          }
+        });
+        buttonTime.placeAt("buttonTime");
+        var buttonPDF = new sap.m.Button({
+          text: "Open PDF",
+          press: function() {
+            var PDF = new sap.m.PDFViewer();
+            alert(document.getElementById("path").value);
+            PDF.setSource(document.getElementById("path").value);
+            PDF.open().
+          }
+        });
+        buttonPDF.placeAt("buttonPDF");
+      }catch(e){
+        alert(e.message);
+      }
    </script>
   </head>
   <body class='sapUiBody'>
     <div id = 'buttonTime'></div>
+    <input type = 'file' id = 'path'>
     <div id = 'buttonPDF'></div>
   </body>
 </html>
