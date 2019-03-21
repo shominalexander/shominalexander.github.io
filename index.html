@@ -23,7 +23,6 @@
           press: function() {
             var path = document.getElementById("path").value;
             var viewer = new sap.m.PDFViewer();
-            sap.m.MessageBox.show("path = " + path);
             viewer.setSource(path);
             viewer.open();
           }
