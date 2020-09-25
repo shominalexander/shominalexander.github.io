@@ -18,15 +18,6 @@
           }
         });
         buttonTime.placeAt("buttonTime");
-        var buttonPDF = new sap.m.Button({
-          text: "Open PDF",
-          press: function() {
-            var viewer = new sap.m.PDFViewer();
-            viewer.setSource('https://assets.cdn.sap.com/sapcom/docs/2015/07/c06ac591-5b7c-0010-82c7-eda71af511fa.pdf');
-            viewer.open();
-          }
-        });
-        buttonPDF.placeAt("buttonPDF");
       }catch(e){
         alert(e.message);
       }
