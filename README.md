@@ -1,1 +1,0 @@
-# shominalexander.github.io
